@@ -29,11 +29,14 @@ android {
                 storePassword System.getenv('BITRISEIO_ANDROID_KEYSTORE_PASSWORD')
             } else {
                 Properties keystoreProps = new Properties()
-                keystoreProps.load(new FileInputStream(rootProject.file("keystore.properties")))
-                keyAlias keystoreProps['keyAlias']
-                keyPassword keystoreProps['keyPassword']
-                storeFile file(keystoreProps['storeFile'])
-                storePassword keystoreProps['storePassword']
+                File propsFile = rootProject.file("keystore.properties")
+                if (propsFile.exists()) {
+                    keystoreProps.load(new FileInputStream(propsFile))
+                    keyAlias keystoreProps['keyAlias']
+                    keyPassword keystoreProps['keyPassword']
+                    storeFile file(keystoreProps['storeFile'])
+                    storePassword keystoreProps['storePassword']
+                }
             }
         }
     }
