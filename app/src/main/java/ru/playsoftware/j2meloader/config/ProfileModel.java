@@ -187,14 +187,14 @@ public class ProfileModel {
 		showKeyboard = true;
 		touchInput = true;
 
-		vkButtonShape = VirtualKeyboard.ROUND_RECT_SHAPE;
-		vkAlpha = 64;
+            vkButtonShape = VirtualKeyboard.OVAL_SHAPE;
+            vkAlpha = 200;
 
-		vkBgColor = 0xD0D0D0;
-		vkFgColor = 0x000080;
-		vkBgColorSelected = 0x000080;
-		vkFgColorSelected = 0xFFFFFF;
-		vkOutlineColor = 0xFFFFFF;
+            vkBgColor = 0xFFB300;
+            vkFgColor = 0x000000;
+            vkBgColorSelected = 0xFF6F00;
+            vkFgColorSelected = 0xFFFFFF;
+            vkOutlineColor = 0xFFE082;
 		systemProperties = ContextHolder.getAssetAsString("defaults/system.props");
 	}
 }

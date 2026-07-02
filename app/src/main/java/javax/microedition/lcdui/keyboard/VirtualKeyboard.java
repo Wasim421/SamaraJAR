@@ -69,7 +69,7 @@ public class VirtualKeyboard implements Overlay, Runnable {
 	public static final int LAYOUT_COLORS = 2;
 	public static final int LAYOUT_TYPE = 3;
 
-	private static final int OVAL_SHAPE = 0;
+	public static final int OVAL_SHAPE = 0;
 	private static final int RECT_SHAPE = 1;
 	public static final int ROUND_RECT_SHAPE = 2;
 
