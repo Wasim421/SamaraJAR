@@ -319,6 +319,10 @@ public class ConfigActivity extends BaseActivity implements View.OnClickListener
 		}
 		if (params == null) {
 			params = new ProfileModel(configDir);
+			ShaderInfo defaultShader = new ShaderInfo("Sharpen", "SamaraJAR");
+			defaultShader.fragment = "sharpen.fsh";
+			defaultShader.vertex = "sharpen.vsh";
+			params.shader = defaultShader;
 		}
 	}
 
